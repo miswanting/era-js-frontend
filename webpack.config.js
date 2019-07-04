@@ -34,6 +34,15 @@ module.exports = {
                 }
             },
             {
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        attrs: [':data-src']
+                    }
+                }
+            },
+            {
                 test: /\.css$/,
                 use: [
                     'vue-style-loader',
